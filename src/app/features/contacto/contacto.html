@@ -1,0 +1,55 @@
+<div class="p-6 bg-gray-50 min-h-screen">
+  <h2 class="text-3xl font-extrabold text-gray-800 mb-6 text-center">
+    Formulario de Contacto
+  </h2>
+
+  <!-- Carrusel de imágenes -->
+  <div id="controls-carousel" class="relative w-full" data-carousel="static">
+    <div class="relative h-56 overflow-hidden rounded-base md:h-96">
+      <!-- Imagen estática -->
+      <div class="duration-700 ease-in-out" data-carousel-item>
+        <img src="/images/Spider-punk.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="1">
+      </div>
+    </div>
+  </div>
+
+  <!-- Párrafo atractivo debajo de la imagen -->
+  <div class="max-w-2xl mx-auto mb-6 p-4 bg-blue-100 border-l-4 border-blue-500 text-blue-700 shadow-lg mt-6"> <!-- Añadido mt-6 para margen superior -->
+    <p class="font-semibold text-lg text-center">
+      ¡Bienvenido al lugar donde las novedades siempre están a la vuelta de la esquina! <br> ¡Te invitamos a explorar y formar parte de nuestra comunidad de ideas brillantes y emocionantes! 🌟
+    </p>
+  </div>
+
+  <!-- Notificación de novedades -->
+  <div class="max-w-2xl mx-auto mb-6 p-4 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 shadow-lg">
+    <p class="font-medium">
+      ¡Novedades Importantes! <strong>Envíanos tu mensaje y te responderemos pronto.</strong>
+    </p>
+  </div>
+
+  <!-- Formulario de contacto -->
+  <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8">
+    <form class="space-y-6">
+      <div>
+        <label class="block text-gray-700 font-semibold mb-2">Nombre</label>
+        <input type="text" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none" placeholder="Ingresa tu nombre">
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+        <input type="email" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none" placeholder="ejemplo@email.com">
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold mb-2">Mensaje</label>
+        <textarea rows="4" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none" placeholder="Escribe tu mensaje aquí..."></textarea>
+      </div>
+
+      <div class="text-center">
+        <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-6 py-3 rounded-lg transition-colors">
+          Enviar Mensaje
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

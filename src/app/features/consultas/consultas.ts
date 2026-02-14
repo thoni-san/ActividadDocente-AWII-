@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Comic } from '../../models/comic';
+import { DetalleComic } from "../../shared/detalle-comic/detalle-comic";
 
 @Component({
   selector: 'app-consultas',
-  imports: [],
+  imports: [DetalleComic],
   templateUrl: './consultas.html',
   styleUrl: './consultas.css',
 })

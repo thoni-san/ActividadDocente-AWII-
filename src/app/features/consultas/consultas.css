@@ -1,0 +1,12 @@
+/* Si usas Tailwind, la mayor parte del estilo está en las clases. Añade esto solo si quieres ajustes extra */
+:host {
+  display: block;
+}
+
+/* Transición para drawer cuando no uses clases utilitarias de Tailwind */
+.drawer-hidden {
+  transform: translateX(100%);
+}
+.drawer-visible {
+  transform: translateX(0);
+}

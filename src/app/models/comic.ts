@@ -1,6 +1,6 @@
-export interface Comic{
-    id:number;
-    nombre:string;
-    especie:string;
-    historial:string;
+export interface Comic {
+  id: number;
+  nombre: string;
+  especie?: string;
+  historial?: string;
 }

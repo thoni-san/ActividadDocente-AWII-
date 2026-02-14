@@ -1,23 +1,22 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, inject, signal } from '@angular/core';
+import { PetService } from '../../services/pet-service';
+import { Pet } from '../../models/pet';
 
 @Component({
   selector: 'app-comic',
-  imports: [CommonModule, FormsModule],
+  imports: [],
   templateUrl: './comic.html',
   styleUrl: './comic.css',
 })
 export class Comic {
 
-  filtro:string='';
+  private comicServicio = inject(PetService)
 
-  comic=[
-    {nombre:"Batman", especie:"Comic", urgencia:"alta", recuperacion:85},
-    {nombre:"Deadpool", especie:"Comic", urgencia:"alta", recuperacion:75},
-    {nombre:"Invisible", especie:"Comic", urgencia:"media", recuperacion:65},
-    {nombre:"Spider-Man", especie:"Comic", urgencia:"media", recuperacion:55},
-    {nombre:"Wolverine", especie:"Comic", urgencia:"baja", recuperacion:45},
-    {nombre:"Joker", especie:"Comic", urgencia:"baja", recuperacion:35},
-  ];
+  comic = signal<Pet[]>([]);
+
+  ngOnInit(){
+    this.comicServicio.getComic().subscribe(datos=>{
+      this.comic.set(datos.data);
+    })
+  }
 }

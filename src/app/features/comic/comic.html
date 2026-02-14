@@ -1,0 +1,35 @@
+<div class="p-8">
+    <h1 class="text-2x1 font-bold mb-4">Panel de Comic</h1>
+    <div class="mb-6">
+        <label for="buscar" class="block text-sm font-medium">Buscar Comic</label>
+        <input [(ngModel)]="filtro" type="text" placeholder="buscar comic" class="boder p-2 rounde w-full md:w-64">
+        <p class="mt-2 text-gray-800">Buscando:<span class="font-bold text-indigo-800">
+                {{filtro}}
+            </span></p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        @for (comics of comic; track comics.nombre) {
+        <div class="boder p-4 rounded-x1 shadow-sm bg-amber-50">
+            <h3 class="text-lg font-bold">
+                {{comics.nombre}}
+            </h3>
+            <p class="text-sm mb-2 uppercase font-bold" [ngClass]="{
+                    'text-red-600':comics.urgencia==='alta',
+                    'text-yellow-400':comics.urgencia==='media',
+                    'text-green-600':comics.urgencia==='baja',
+                }">
+                Prioridad:{{comics.urgencia}}
+            </p>
+            <div class="w-full bg-gray-300 rounded-full h-2.5 mb-1">
+                <div class="bg-indigo-600 h-2.5 rounded-full" [ngStyle]="{'width':comics.recuperacion + '%'}">
+
+                </div>
+            </div>
+            <span class="text-xs text-gray-500">
+                Recuperacion: {{comics.recuperacion}}%
+            </span>
+        </div>
+        }
+    </div>
+</div>
